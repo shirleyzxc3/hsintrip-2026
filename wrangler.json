@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "hsintrip-2026",
+  "main": "src/worker.js",
+  "compatibility_date": "2025-10-08",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "trip-notes-db",
+      "database_id": "193e6798-2b7d-4a2a-8828-4aa0093f292e"
+    }
+  ],
+  "observability": { "enabled": true }
+}
